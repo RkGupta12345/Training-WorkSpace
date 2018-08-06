@@ -1,0 +1,7 @@
+package com.training.sparkworks;
+
+public class Department {
+	private int departmentId;
+	private String departmentName;
+
+}

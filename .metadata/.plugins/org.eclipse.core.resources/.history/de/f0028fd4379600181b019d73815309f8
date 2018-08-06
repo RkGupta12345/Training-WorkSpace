@@ -1,0 +1,41 @@
+package com.training.sparkworks;
+
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+
+import com.training.commons.DataSource;
+import com.training.commons.SparkConnection;
+import com.training.commons.Utilities;
+
+public class SparkOperationsClient {
+
+	public static void main(String[] args) {
+		Logger.getLogger("org").setLevel(Level.ERROR);
+		//Logger.getLogger("akka").setLevel(Level.ERROR);
+		JavaSparkContext sparkContext= SparkConnection.getContext();
+		
+		//start loading the data
+		//1. load the collection and cache it
+		JavaRDD<Integer> collData=DataSource.getCollData();
+		
+		System.out.println("Total No Of Records::=>"+collData.count());
+		
+		//2. load the file and cache it
+		
+		JavaRDD<String> autoDataContent=sparkContext.textFile("./data/auto-data.csv");
+		
+		
+		System.out.println("No oF Records=>"+autoDataContent.count());
+		
+		//printing 5 lines of data
+		
+		System.out.println("Loading data from file");
+		System.out.println("===========================");
+		
+		//autoDataContent.take(5).forEach(System.out::println);
+		Utilities.printStringRDD(autoDataContent, 10);
+	}
+
+}

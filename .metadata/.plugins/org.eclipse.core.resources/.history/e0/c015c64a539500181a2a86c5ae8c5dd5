@@ -1,0 +1,8 @@
+package com.exilant.mongotemplate.service;
+
+import com.exilant.mongotemplate.model.Person;
+
+public interface PersonService {
+	boolean savePerson(Person person);
+
+}

@@ -1,0 +1,18 @@
+package com.exilant.mongotemplate.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+
+import com.exilant.mongotemplate.model.Person;
+
+public class PersonDaoImpl implements PersonDao{
+	@Autowired
+	MongoTemplate mongoTemplate;
+
+	@Override
+	public boolean savePerson(Person person) {
+		mongoTemplate.save(person);
+		return person;
+	}
+
+}

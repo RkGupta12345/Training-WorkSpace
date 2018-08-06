@@ -1,0 +1,5 @@
+package com.exilant.mongotemplate.controller;
+
+public class PersonController {
+
+}

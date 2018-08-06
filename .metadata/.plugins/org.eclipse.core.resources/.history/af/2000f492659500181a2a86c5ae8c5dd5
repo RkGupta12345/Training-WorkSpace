@@ -1,0 +1,11 @@
+package com.exilant.mongotemplate.dao;
+
+import java.util.List;
+
+import com.exilant.mongotemplate.model.Person;
+
+public interface PersonDao {
+	boolean savePerson(Person person);
+	List<Person> findAllPersons(Person person);
+	
+}

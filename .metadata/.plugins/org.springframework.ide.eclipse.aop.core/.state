@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="SpringWorks"/>
+<aop-project name="SpringWorks3"/>
+<aop-project name="mongodbcurd"/>
+<aop-project name="demoSpringAirline"/>
+<aop-project name="spring-cloud-config-server"/>
+<aop-project name="restful-works"/>
+<aop-project name="currency-service"/>
+</aop-reference-model>

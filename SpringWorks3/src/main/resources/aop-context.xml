@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+
+	<aop:aspectj-autoproxy />
+	
+	<!-- <bean class="com.training.aop.banking.LoggingAspect"/> -->
+	
+	<!-- <bean class="com.training.aop.banking.LoggingAspectAfter"/> -->
+	
+	<bean class="com.training.aop.banking.LoggingAspectAround"/>
+	
+	<bean id="account1" class="com.training.aop.model.Account">
+		<property name="accountNo" value="1011" />
+		<property name="accName" value="SUMAN" />
+		<property name="balance" value="500000" />
+	</bean>
+
+	<bean id="account2" class="com.training.aop.model.Account">
+		<property name="accountNo" value="1012" />
+		<property name="accName" value="SURAJ" />
+		<property name="balance" value="400000" />
+	</bean>
+
+	<bean id="sbAccount" class="com.training.aop.model.SBAccount">
+		<property name="acc" ref="account1" />
+	</bean>
+
+
+	<bean id="caAccount" class="com.training.aop.model.CAAccount">
+		<property name="account" ref="account2" />
+	</bean>
+
+	<bean id="banking" class="com.training.aop.service.BankingService"
+		autowire="byName" />
+
+
+</beans>

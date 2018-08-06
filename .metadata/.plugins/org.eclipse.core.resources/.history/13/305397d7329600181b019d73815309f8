@@ -1,0 +1,15 @@
+package com.training.commons;
+
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.sql.SparkSession;
+
+public class SparkConnection {
+	private static String appName="sampleApp";
+	private static String sparkMaster="loca[2]";
+
+	private static JavaSparkContext spContext=null;
+	private static SparkSession sparkSession=null;
+	
+	 private static String tempDir=" /Users/ravi.kumar/Desktop/spark-warehouse";
+	
+}

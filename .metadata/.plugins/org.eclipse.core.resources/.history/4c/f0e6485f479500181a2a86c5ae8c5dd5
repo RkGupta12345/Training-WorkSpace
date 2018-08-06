@@ -1,0 +1,5 @@
+package com.exilant.mongotemplate.dao;
+
+public class PersonDaoImpl {
+
+}

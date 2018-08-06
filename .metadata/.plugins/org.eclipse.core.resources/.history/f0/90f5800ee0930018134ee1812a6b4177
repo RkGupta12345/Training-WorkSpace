@@ -1,0 +1,5 @@
+package com.exilant.mongodb;
+
+public class Employee {
+
+}

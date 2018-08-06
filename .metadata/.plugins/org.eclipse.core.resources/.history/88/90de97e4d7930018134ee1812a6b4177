@@ -1,0 +1,13 @@
+package com.exilant.mongodb;
+
+import com.mongodb.MongoClient;
+
+public class GetMetaData {
+
+	public static void main(String[] args) {
+		MongoClient mc=new MongoClient("localhost",27017);
+		System.out.println("Connection got"+mc);
+
+	}
+
+}

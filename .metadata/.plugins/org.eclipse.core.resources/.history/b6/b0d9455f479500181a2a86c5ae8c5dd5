@@ -1,0 +1,8 @@
+package com.exilant.mongotemplate.dao;
+
+import com.exilant.mongotemplate.model.Person;
+
+public interface PersonDao {
+	Person savePerson(Person person);
+
+}

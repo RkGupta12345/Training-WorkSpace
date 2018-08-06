@@ -1,0 +1,12 @@
+package com.exilant.mongotemplate.mongodbcurd;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MongodbcurdApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MongodbcurdApplication.class, args);
+	}
+}

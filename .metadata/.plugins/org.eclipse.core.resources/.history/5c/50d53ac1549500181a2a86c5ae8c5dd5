@@ -1,0 +1,10 @@
+package com.exilant.mongotemplate.service;
+
+import org.springframework.stereotype.Service;
+
+import com.exilant.mongotemplate.model.Person;
+@Service
+public interface PersonService {
+	boolean savePerson(Person person);
+
+}

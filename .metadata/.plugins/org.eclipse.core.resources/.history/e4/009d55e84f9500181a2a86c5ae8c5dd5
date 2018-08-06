@@ -1,0 +1,14 @@
+package com.exilant.mongotemplate.mongodbcurd;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+@SpringBootApplication
+@ComponentScan(basePackages="com.exilant.mongotemplate.controller.*")
+public class MongodbcurdApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MongodbcurdApplication.class, args);
+	}
+}

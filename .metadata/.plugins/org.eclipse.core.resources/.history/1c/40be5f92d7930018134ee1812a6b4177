@@ -1,0 +1,10 @@
+package com.exilant.mongodb;
+
+public class GetMetaData {
+
+	public static void main(String[] args) {
+		MongoC
+
+	}
+
+}

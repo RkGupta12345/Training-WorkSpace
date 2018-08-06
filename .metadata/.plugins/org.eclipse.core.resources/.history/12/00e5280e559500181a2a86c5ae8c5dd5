@@ -1,0 +1,37 @@
+package com.exilant.mongotemplate.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.exilant.mongotemplate.model.Person;
+import com.exilant.mongotemplate.service.PersonService;
+import com.exilant.mongotemplate.service.PersonServiceImpl;
+
+@RestController
+public class PersonController {
+	
+	
+	public PersonController() {
+		System.out.println("Person controller called::");
+	}
+
+	@Autowired
+	PersonService ps;
+	
+	@PostMapping("/savePerson")
+	String  savePerson(@RequestBody Person person) {
+		String msg="";
+		boolean b=ps.savePerson(person);
+		if(b) {
+			msg="Person:=>> "+person.getPersonId()+"saved in database";
+		}
+		else
+		{
+			msg="Person:=>> "+person.getPersonId()+"is not saved in database";
+		}
+		return msg;
+	}
+
+}

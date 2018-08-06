@@ -1,0 +1,22 @@
+package com.exilant.mongotemplate.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.exilant.mongotemplate.model.Person;
+import com.exilant.mongotemplate.service.PersonService;
+
+@Controller
+public class PersonController {
+	@Autowired
+	PersonService ps;
+	
+	@PostMapping("/savePerson")
+	String  savePerson(@RequestBody Person person) {
+		String msg="";
+		boolean b=ps.savePerson(person);
+	}
+
+}
